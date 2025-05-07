@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Works</title>
-    <link rel="stylesheet" href="portfolio-style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -18,13 +18,12 @@
 
         <div class="sidenav">    
             <button class="menu-button" id="openMenu">☰</button>
-            <div class="overlay-menu" id="overlayMenu">
-                <button class="close-button" id="closeMenu">X</button>
-                <nav>
-                  <a href="index.html">Home</a>
-                  <a href="portfolio-workspage.html">Works</a>
-                  <a href="about.html">Bio</a>
-                </nav>
+            
+            <div id="overlay" class="overlay" style="display: none;">
+              <a href="#home">Home</a>
+              <a href="#works">Works</a>
+              <a href="#bio">Bio</a>
+              <a href="#contact">Contact</a>
             </div>
             
         </div>
@@ -58,26 +57,21 @@
     </footer>
 
     <script>
-        const openMenu = document.getElementById('openMenu');
-        const closeMenu = document.getElementById('closeMenu');
-        const overlayMenu = document.getElementById('overlayMenu');
-      
-        // 🟢 Show overlay menu
-        openMenu.addEventListener('click', () => {
-          overlayMenu.classList.add('active');
+      const menuButton = document.getElementById('menuButton');
+      const overlay = document.getElementById('overlay');
+  
+      menuButton.addEventListener('click', () => {
+        const isVisible = overlay.style.display === 'flex';
+        overlay.style.display = isVisible ? 'none' : 'flex';
+        menuButton.textContent = isVisible ? '☰' : '✖';
+      });
+  
+      document.querySelectorAll('#overlay a').forEach(link => {
+        link.addEventListener('click', () => {
+          overlay.style.display = 'none';
+          menuButton.textContent = '☰';
         });
-      
-        // 🔴 Hide overlay menu
-        closeMenu.addEventListener('click', () => {
-          overlayMenu.classList.remove('active');
-        });
-      
-        // ⌨️ Close with ESC
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape') {
-            overlayMenu.classList.remove('active');
-          }
-        });
+      });
     </script>
     
 </body>
