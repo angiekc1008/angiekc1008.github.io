@@ -1,0 +1,23 @@
+<svg width="41" height="53" viewBox="0 0 41 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="41" height="53" fill="#E4E4E4"/>
+<g id="asset-page" clip-path="url(#clip0_1_3)">
+<rect width="3099" height="2773" transform="translate(-2629 -2138)" fill="white"/>
+<g id="menu-button">
+<rect x="-30.5" y="-317.5" width="101" height="473" rx="4.5" stroke="#9747FF" stroke-dasharray="10 5"/>
+<g id="Property 1=Variant2">
+<rect id="Rectangle 9" x="-11" y="-216" width="62" height="345" fill="#FF3064"/>
+<g id="menu-icons">
+<g id="Vector">
+<path d="M0.0712917 43.771C0.0712917 32.4885 9.21754 23.3423 20.5 23.3423C31.7825 23.3423 40.9287 32.4885 40.9287 43.771V52.3423H0.0712917V43.771Z" fill="#FFFDFD"/>
+<path d="M32.8169 12.8423C32.8169 19.7458 27.2205 25.3423 20.3169 25.3423C13.4133 25.3423 7.81689 19.7458 7.81689 12.8423C7.81689 5.93873 13.4133 0.342285 20.3169 0.342285C27.2205 0.342285 32.8169 5.93873 32.8169 12.8423Z" fill="white"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1_3">
+<rect width="3099" height="2773" fill="white" transform="translate(-2629 -2138)"/>
+</clipPath>
+</defs>
+</svg>

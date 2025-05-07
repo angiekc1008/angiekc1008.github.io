@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    margin: 0;
+}
+
+.sidenav {
+    text-align-last:center;
+}
+
+.menu-button {
+    position: fixed;
+    color: white;
+    top: 20px;
+    left: 16px;
+    z-index: 3;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFEAEF8A;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #FF3064;
+    border:2px solid #FF3064;
+    border-top:5px solid #FF3064;
+    border-left:0.5px solid #FF3064;
+    border-right:0.5px solid #FF3064;
+}
+
+header {
+    background-color:#FF6E49;
+    display: flex;
+    flex-direction: column;
+    width: 71px;
+    height: 100vh;
+    align-items: normal;
+    gap:20px;
+    justify-content:center;
+    position: fixed;
+}
+
+.home-header {
+    background-color:#FF6E49;
+    display: flex;
+    flex-direction: column;
+    width: 71px;
+    align-items: center;
+    gap:20px;
+    padding:30px;
+    justify-content:center;
+    position: absolute;
+}
+
+.bio-header {
+    background-color:#FF6E49;
+    display: flex;
+    flex-direction: column;
+    width: 71px;
+    align-items: center;
+    gap:20px;
+    padding:30px;
+    justify-content:center;
+    position: fixed;
+}
+
+#page-title {
+    color: #FFF;
+    text-orientation:upright;
+    writing-mode: vertical-lr;
+    text-align: center;
+    align-content: center;
+    font-family: Tomorrow;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 125% */
+}
+
+#flex-container {
+    display:flex; 
+    /* We will use JavaScript to make this switch when burger button is clicked */
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100vw;
+}
+
+
+.projects > button {
+    border:none;
+}
+
+.project-title {
+    display:flex;
+    height: max-content;
+    column-count: 4;
+    column-gap: 0;
+
+    /* transform: rotate(-90deg); */
+    text-orientation:mixed;
+    writing-mode: vertical-lr;
+    padding: 31px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 6px; */
+    font-family: "Tomorrow", sans-serif;
+    font-size:18px;
+    font-weight: 600;
+    font-style: normal;
+    color:white;
+    margin:0;
+}
+
+.hidden {
+    position:fixed;
+    display:none;
+    width:100vw;
+    height:auto;
+    background-color: rgba(255, 234, 239, 0.54);
+    z-index:9999;
+}
+
+.project-card {
+    background-color:#FF6E49;
+
+}
+
+#pineshield {background-color: rgba(255, 110, 73, 0.80);}
+#soulstones {background-color: rgba(255, 48, 100, 0.80);}
+#stevenuniverse {background-color: rgba(255, 169, 151, 0.80);}
+#withinthestars {background-color: #FF6E49;}
+#constriction {background-color: rgba(255, 48, 100, 0.80);}
+#barstow {
+    background-color: rgba(255, 110, 73, 0.80);
+    transform:translateY(-236px)
+}
+#TAL {
+    background-color: rgba(255, 169, 151, 0.80);
+    transform:translateY(-271px)
+}
+
+.block1 {
+    background-color:rgba(255, 48, 100, 0.8);
+    z-index: -1;
+    width: 48vw;
+    height: 175px;
+}
+
+.block2 {
+    position: relative;
+    background-color:rgba(255, 135, 22, 0.42);
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 500px;
+    gap:80px;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    transform:translate(30px, -90px);
+    z-index:9999;
+}
+
+.block2 > p {
+    font-family: "Tomorrow", sans-serif;
+    font-size:28px;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+}
+
+.block3 {
+    background-color:#FFA997;
+    width: 65vw;
+    height: 596px;
+    justify-self: right;
+    transform: translateY(-275px);
+}
+
+a {
+    color:white;
+    text-decoration: none;
+}
+
+a:hover {
+    color:rgb(223, 109, 47);
+}
+
+a:visited {
+    color:white;
+    text-decoration:none;
+}
+
+.bio {
+    display:flex;
+    background-color:#FF3064;
+    color: white;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 30px 20px 20px 90px;
+    justify-content: flex-end;
+}
+
+#headshot {
+    display:flex;
+    max-width:200px;
+    height:auto;
+    justify-self: center;
+    background-color: #ff3064ab;
+    padding:10px;
+    margin-left:60px;
+}
+
+.phone {
+    background-color: #FFA997;
+}
+
+.email {
+    background-color: #FF3064;
+
+}
+
+.phone, .email {
+    display:flex;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+    width: min-content;
+    max-width: 100px;
+    padding:10px;
+    justify-self: center;
+    text-align: center;
+    margin:auto;
+}
+
+script {
+    display:none;
+}
+
+@media screen and (min-width: 500px) {
+    .project-title {
+        padding:35px;
+
+    }
+
+    #barstow {
+        transform: translateY(0);
+    }
+
+    #TAL {
+        transform: translateY(0);
+    }
+
+
+}
+
+/*
+.tomorrow-regular {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tomorrow-semibold {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+
+*/

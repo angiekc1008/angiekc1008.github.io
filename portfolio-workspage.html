@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="stylesheet" href="portfolio-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script>
+        const openMenu = document.getElementById('openMenu');
+        const closeMenu = document.getElementById('closeMenu');
+        const overlayMenu = document.getElementById('overlayMenu');
+      
+        // 🟢 Show overlay menu
+        openMenu.addEventListener('click', () => {
+          overlayMenu.classList.add('active');
+        });
+      
+        // 🔴 Hide overlay menu
+        closeMenu.addEventListener('click', () => {
+          overlayMenu.classList.remove('active');
+        });
+      
+        // ⌨️ Close with ESC
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            overlayMenu.classList.remove('active');
+          }
+        });
+      </script>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="sidenav">    
+            <button class="menu-button" id="openMenu">☰</button>
+            <div class="overlay-menu" id="overlayMenu">
+                <button class="close-button" id="closeMenu">X</button>
+                <nav>
+                  <a href="portfolio-homepage.html">Home</a>
+                  <a href="portfolio-workspage.html">Works</a>
+                  <a href="portfolio-biopage.html">Bio</a>
+                </nav>
+            </div>
+            
+        </div>
+        
+        <div id="page-title">WORKS</div>
+        
+
+    </header>
+
+    <main>
+
+        <section>
+            <div id="flex-container" class="projects">
+
+                <button type="button" class="project-title" id="soulstones"><a href="#">SOUL STONES</a></button>
+                <button type="button" class="project-title" id="stevenuniverse"><a href="#">STEVEN UNIVERSE CHARACTERS BY SEASON</a></button>
+                <button type="button" class="project-title" id="withinthestars"><a href="#">WITHIN THE STARS</a></button>
+                <button type="button" class="project-title" id="constriction"><a href="#">CONSTRICTION</a></button>
+                <button type="button" class="project-title" id="pineshield"><a href="#">PINE SHIELD STATIONERY SET</a></button>
+                <button type="button" class="project-title" id="barstow"><a href="#">BARSTOW POSTERS</a></button>
+                <button type="button" class="project-title" id="TAL"><a href="#">THIS AMERICAN LIFE TRANSCRIPT</a></button>
+            </div>
+        </section>
+
+        <div id="overlay1" class="hidden">
+            <div class="project-card">
+                <img src="project-imgs/SoulStones6.jpg">
+                <p>A character sheet showing the appearance of each episodes character in relation to the amount of time they appear compared to all (main) characters in the episode. Each sheet goes by season.</p>
+            </div>
+        </div>
+
+        <div id="overlay2" class="hidden">
+            <div class="project-card">
+                <img src="project-imgs/steven-universe_cbs.jpg">
+                <p>A character sheet showing the appearance of each episodes character in relation to the amount of time they appear compared to all (main) characters in the episode. Each sheet goes by season.</p>
+            </div>
+        </div>
+
+        <div id="overlay3" class="hidden">
+            <div class="project-card">
+                <img src="project-imgs/Within the Stars.jpg">
+                <p>A character sheet showing the appearance of each episodes character in relation to the amount of time they appear compared to all (main) characters in the episode. Each sheet goes by season.</p>
+            </div>
+        </div>
+
+        <div id="overlay4" class="hidden">
+            <div class="project-card">
+                <img src="project-imgs/constriction.jpg">
+                <p>A character sheet showing the appearance of each episodes character in relation to the amount of time they appear compared to all (main) characters in the episode. Each sheet goes by season.</p>
+            </div>
+        </div>
+
+        <div id="overlay5" class="hidden">
+            <div class="project-card">
+                <img src="project-imgs/PineShield.jpg">
+                <p>A character sheet showing the appearance of each episodes character in relation to the amount of time they appear compared to all (main) characters in the episode. Each sheet goes by season.</p>
+            </div>
+        </div>
+
+        <div id="overlay6" class="hidden">
+            <div class="project-card">
+                <img src="project-imgs/barstow posters.jpg">
+                <p>A character sheet showing the appearance of each episodes character in relation to the amount of time they appear compared to all (main) characters in the episode. Each sheet goes by season.</p>
+            </div>
+        </div>
+
+        <div id="overlay7" class="hidden">
+            <div class="project-card">
+                <img src="project-imgs/podcast_transcript2.jpg">
+                <p>A character sheet showing the appearance of each episodes character in relation to the amount of time they appear compared to all (main) characters in the episode. Each sheet goes by season.</p>
+            </div>
+        </div>
+
+        
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+
+    
+    
+</body>
+</html>
