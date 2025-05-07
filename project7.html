@@ -12,11 +12,40 @@
 </head>
 <body class="project-page project7">
 
+    <button class="menu-button" id="openMenu">☰</button>
+
+    <div id="overlay" class="overlay" style="display: none;">
+      <a href="index.html">Home</a>
+      <a href="works.html">Works</a>
+      <a href="about.html">Bio</a>
+      <a href="about.html#sectionId">Contact</a>
+    </div>
+
     <div class="project-card">
        <img src="project-imgs/podcast_transcript2.jpg">
     
         <p>Book style transcript of the podcast This American Life. Mainly focused on setting up the typography in a way that matched the spoken version. Made in ART 449 with David Stairs. Adobe InDesign.</p> 
     </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const menuButton = document.getElementById('openMenu');
+          const overlay = document.getElementById('overlay');
+      
+          menuButton.addEventListener('click', () => {
+            const isVisible = overlay.style.display === 'flex';
+            overlay.style.display = isVisible ? 'none' : 'flex';
+            menuButton.textContent = isVisible ? '☰' : '✖';
+          });
+      
+          document.querySelectorAll('#overlay a').forEach(link => {
+            link.addEventListener('click', () => {
+              overlay.style.display = 'none';
+              menuButton.textContent = '☰';
+            });
+          });
+        });
+      </script>
     
     
 </body>

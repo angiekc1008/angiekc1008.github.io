@@ -13,6 +13,15 @@
 
     <header class="bio-header">
 
+        <button class="menu-button" id="openMenu">☰</button>
+
+        <div id="overlay" class="overlay" style="display: none;">
+          <a href="index.html">Home</a>
+          <a href="works.html">Works</a>
+          <a href="about.html">Bio</a>
+          <a href="about.html/sectionId">Contact</a>
+        </div>
+
         <div id="page-title">BIO</div>
 
     </header>
@@ -21,17 +30,44 @@
 
     <br><br>
 
-    <img id="headshot" src="project-imgs/Headshot.jpg">
+    <section class="contact-info">
+
+        <img id="headshot" src="project-imgs/Headshot.jpg">
+
+
+        <div class="phone">PHONE<br>586 551 3388</div>
+        <div class="email">EMAIL<br>chyno1ak @ cmich.edu</div>
+
+    </section>
 
     <br><br>
-    <div id="sectionId"></div>
+    
 
     <div class="bio">I feel like I can't do much to help a lot of the time, but what I can do is spread awareness and share my overwhelming joy and love for the world and all of its possibilities.</div>
 
     <br><br>
 
-    <div class="phone">PHONE 586 551 3388</div>
-    <div class="email">EMAIL chyno1ak @ cmich.edu</div>
+    <div id="sectionId"></div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const menuButton = document.getElementById('openMenu');
+          const overlay = document.getElementById('overlay');
+      
+          menuButton.addEventListener('click', () => {
+            const isVisible = overlay.style.display === 'flex';
+            overlay.style.display = isVisible ? 'none' : 'flex';
+            menuButton.textContent = isVisible ? '☰' : '✖';
+          });
+      
+          document.querySelectorAll('#overlay a').forEach(link => {
+            link.addEventListener('click', () => {
+              overlay.style.display = 'none';
+              menuButton.textContent = '☰';
+            });
+          });
+        });
+      </script>
     
 </body>
 </html>

@@ -12,11 +12,40 @@
 </head>
 <body class="project-page project4">
 
+    <button class="menu-button" id="openMenu">☰</button>
+
+    <div id="overlay" class="overlay" style="display: none;">
+      <a href="index.html">Home</a>
+      <a href="works.html">Works</a>
+      <a href="about.html">Bio</a>
+      <a href="about.html#sectionId">Contact</a>
+    </div>
+
     <div class="project-card">
         <img src="project-imgs/constriction.jpg">
     
         <p>This font was inspired by high contrast, in all forms. Visually, contrast always speaks to me, so I wanted to use that inspiration for this typeface. In the end I named it Constriction not only for its squeezed look, but also to reference the struggles I face as an artist and often feeling held back by myself.</p>
     </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const menuButton = document.getElementById('openMenu');
+          const overlay = document.getElementById('overlay');
+      
+          menuButton.addEventListener('click', () => {
+            const isVisible = overlay.style.display === 'flex';
+            overlay.style.display = isVisible ? 'none' : 'flex';
+            menuButton.textContent = isVisible ? '☰' : '✖';
+          });
+      
+          document.querySelectorAll('#overlay a').forEach(link => {
+            link.addEventListener('click', () => {
+              overlay.style.display = 'none';
+              menuButton.textContent = '☰';
+            });
+          });
+        });
+      </script>
     
     
 </body>

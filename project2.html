@@ -12,12 +12,41 @@
 </head>
 <body class="project-page project2">
 
+    <button class="menu-button" id="openMenu">☰</button>
+
+    <div id="overlay" class="overlay" style="display: none;">
+      <a href="index.html">Home</a>
+      <a href="works.html">Works</a>
+      <a href="about.html">Bio</a>
+      <a href="about.html#sectionId">Contact</a>
+    </div>
+
     <div class="project-card">
         
         <img src="project-imgs/steven-universe_cbs.jpg">
     
         <p>A character sheet showing the appearance of each episodes character in relation to the amount of time they appear compared to all (main) characters in the episode. Each sheet goes by season.</p>
     </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const menuButton = document.getElementById('openMenu');
+          const overlay = document.getElementById('overlay');
+      
+          menuButton.addEventListener('click', () => {
+            const isVisible = overlay.style.display === 'flex';
+            overlay.style.display = isVisible ? 'none' : 'flex';
+            menuButton.textContent = isVisible ? '☰' : '✖';
+          });
+      
+          document.querySelectorAll('#overlay a').forEach(link => {
+            link.addEventListener('click', () => {
+              overlay.style.display = 'none';
+              menuButton.textContent = '☰';
+            });
+          });
+        });
+      </script>
 
     
 </body>

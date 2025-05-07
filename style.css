@@ -15,7 +15,7 @@
     position: fixed;
     top: 1rem;
     left: 1rem;
-    z-index: 50;
+    z-index: 10001;
     padding: 0.5rem;
     border: none;
     background:#FF3064;
@@ -26,22 +26,22 @@
 .overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 130, 167, 0.842);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     font-size: 2rem;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
     color: white;
-    z-index: 40;
-}
-.overlay a {
-    color: white;
-    text-decoration: none;
+    z-index: 10000;
 }
 .overlay a:hover {
     text-decoration: underline;
+    color: rgb(223, 109, 47);
 }
 
 nav {
@@ -165,11 +165,11 @@ header {
 #constriction {background-color: rgba(255, 48, 100, 0.80);}
 #barstow {
     background-color: rgba(255, 110, 73, 0.80);
-    transform:translateY(-236px)
+    /* transform:translateY(-236px) */
 }
 #TAL {
     background-color: rgba(255, 169, 151, 0.80);
-    transform:translateY(-271px)
+    /* transform:translateY(-271px) */
 }
 
 .project-page {
@@ -207,7 +207,7 @@ header {
     align-items: center;
     justify-self: center;
     transform:translate(30px, -90px);
-    z-index:9999;
+    z-index:30;
 }
 
 .block2 > p {
@@ -263,11 +263,12 @@ a:visited {
 
 .phone {
     background-color: #FFA997;
+    transform: translateY(-40px);
 }
 
 .email {
     background-color: #FF3064;
-
+    transform: translateY(40px);
 }
 
 .phone, .email {
@@ -277,27 +278,32 @@ a:visited {
     font-style: normal;
     color:white;
     width: min-content;
-    height:max-content;
+    height:175px;
     max-width: 100px;
     padding:10px;
     justify-self: center;
+    align-items: inherit;
     text-align: center;
-    margin:auto;
+    margin-left: 30px;
 }
 
-script {
-    display:none;
+.contact-info {
+    display: flex;
+    gap: 1rem; /* optional: space between phone and email */
+    justify-content: center; /* optional: center them horizontally */
+    align-items: center; /* optional: align vertically */
+    flex-wrap: wrap; /* optional: makes them wrap if the screen is too small */
 }
 
 @media screen and (min-width: 500px) {
 
-    #barstow {
+    /* #barstow {
         transform: translateY(0);
     }
 
     #TAL {
         transform: translateY(0);
-    }
+    } */
 
     #headshot {
         width:45%;
