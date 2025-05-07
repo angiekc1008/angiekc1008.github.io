@@ -25,7 +25,7 @@
 }
 
 .overlay-menu {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -39,7 +39,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s ease, visibility 0.4s ease;
-    z-index: 1000;
+    z-index: 9999;
 }
 
 nav {
@@ -141,17 +141,18 @@ header {
     margin:0;
 }
 
-.hidden {
+/* .hidden {
     position:fixed;
     display:none;
     width:100vw;
     height:auto;
     background-color: rgba(255, 234, 239, 0.54);
     z-index:9999;
-}
+} */
 
 .project-card {
-    background-color:#FF6E49;
+    justify-self: center;
+    width:700px;
 
 }
 
@@ -167,6 +168,22 @@ header {
 #TAL {
     background-color: rgba(255, 169, 151, 0.80);
     transform:translateY(-271px)
+}
+
+.project-page {
+   background-color: #ffdae2be;
+   font-family: "Tomorrow", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   color:rgb(204, 12, 60);
+   margin:20px;
+
+}
+
+.project-page > .project-card > img {
+    max-width:fill;
+    border:0;
+
 }
 
 .block1 {
@@ -239,7 +256,7 @@ a:visited {
     justify-self: center;
     background-color: #ff3064ab;
     padding:10px;
-    margin-left:60px;
+    margin-left:-80px;
 }
 
 .phone {
@@ -258,6 +275,7 @@ a:visited {
     font-style: normal;
     color:white;
     width: min-content;
+    height:max-content;
     max-width: 100px;
     padding:10px;
     justify-self: center;
@@ -281,6 +299,17 @@ script {
 
     #TAL {
         transform: translateY(0);
+    }
+
+    #headshot {
+        width:45%;
+        max-width:600px;
+        margin-left: -80px;
+    }
+
+    .bio {
+        margin-left:300px;
+        padding:30px;
     }
 
 
